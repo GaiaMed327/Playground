@@ -2,9 +2,18 @@
 // Componente Hero para Playground STUDIO
 import { Image } from 'astro:assets';
 import patitoImg from '../assets/INICIO/pato_de_cabeza.png';
+import fondoBanner from '../assets/INICIO/fondo_banner.png';
+
+import estrellaAzul from '../assets/INICIO/estrella_azul.png';
+import estrellaVerde from '../assets/INICIO/estrella_verde.png';
+import estrellaAmarilla from '../assets/INICIO/estrella_amarilla.png';
+import estrellaRosa from '../assets/INICIO/estrella_rosa.png';
 ---
 
-<section class="relative w-full bg-[#E0F2FE] min-h-[85vh] flex items-center overflow-hidden py-12 md:py-0">
+<section 
+  class="relative w-full min-h-[85vh] flex items-center overflow-hidden py-12 md:py-0 bg-cover bg-center bg-no-repeat"
+  style={`background-image: url(${fondoBanner.src});`}
+>
   
   <div class="absolute top-10 left-10 text-3xl opacity-60 select-none animate-bounce" style="animation-duration: 3s;">⭐</div>
   <div class="absolute top-24 left-1/3 text-2xl opacity-40 select-none animate-pulse">☁️</div>
@@ -12,7 +21,14 @@ import patitoImg from '../assets/INICIO/pato_de_cabeza.png';
 
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
     
-    <div class="md:col-span-7 text-center md:text-left flex flex-col items-center md:items-start">
+    <div class="md:col-span-7 text-center md:text-left flex flex-col items-center md:items-start relative">
+      
+      <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+        <Image src={estrellaAzul} alt="Estrella Azul" class="w-12 h-auto" />
+        <Image src={estrellaVerde} alt="Estrella Verde" class="w-9 h-auto" />
+        <Image src={estrellaAmarilla} alt="Estrella Amarilla" class="w-7 h-auto" />
+        <Image src={estrellaRosa} alt="Estrella Rosa" class="w-5 h-auto" />
+      </div>
       
       <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-gray-900 leading-tight tracking-tight max-w-xl">
         Transformamos ideas en <span class="text-[#3B82F6] underline decoration-wavy decoration-[#F59E0B] mx-1">juegos</span> <span class="text-[#EF4444]">visuales</span>
@@ -49,11 +65,7 @@ import patitoImg from '../assets/INICIO/pato_de_cabeza.png';
 
     </div>
 
-    <div class="md:col-span-5 flex justify-center items-center relative">
-      
-      <div class="w-72 h-72 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] bg-[#FEF08A] rounded-full absolute -top-12 -right-12 md:-right-24 lg:-right-32 border-8 border-white shadow-lg z-0"></div>
-      
-      <div class="md:col-span-5 flex justify-center items-end relative min-h-[250px] sm:min-h-[350px] md:min-h-full">
+    <div class="md:col-span-5 flex justify-center items-end relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px]">
       
       <div class="w-72 h-72 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] bg-[#FEF08A] rounded-full absolute -top-12 -right-12 md:-right-24 lg:-right-32 border-8 border-white shadow-lg z-0"></div>
       
@@ -62,11 +74,9 @@ import patitoImg from '../assets/INICIO/pato_de_cabeza.png';
           src={patitoImg} 
           alt="Un patito simpático asomándose" 
           loading="eager"
-          class="w-full h-auto block align-bottom" 
+          class="w-full h-auto block" 
         />
       </div>
-
-    </div>
 
     </div>
 
