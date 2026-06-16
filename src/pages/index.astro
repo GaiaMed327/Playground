@@ -2,19 +2,25 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
+
+import ServicesCarousel from '../components/ServicesCarousel.astro';
+import FeaturedPortfolio from '../components/FeaturedPortfolio.astro';
+import AboutSnippet from '../components/AboutSnippet.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+
 import '../styles/global.css';
 ---
 
 <html lang="es">
   <head>
-  	<meta charset="utf-8" />
-  	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  	<meta name="viewport" content="width=device-width" />
-  	<title>Playground STUDIO | Portafolio</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Playground STUDIO | Portafolio</title>
   
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-[#F8FAFC] min-h-screen flex flex-col text-gray-900">
     
@@ -22,6 +28,14 @@ import '../styles/global.css';
 
     <main class="flex-grow">
       <Hero />
+
+      <ServicesCarousel />
+
+      <FeaturedPortfolio />
+
+      <AboutSnippet />
+
+      <ContactCTA />
     </main>
 
     <Footer />
