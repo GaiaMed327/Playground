@@ -1,5 +1,7 @@
 ---
 // AboutSnippet.astro - Mini sección "Sobre mí" con estilo Polaroid
+import { Image } from 'astro:assets';
+import valeFoto from '../assets/INICIO/Vale_foto.png';
 ---
 <section class="py-20 bg-[#BFDBFE]/40 relative">
   
@@ -9,8 +11,12 @@
       <div class="md:col-span-5 flex justify-center">
         <div class="bg-white p-4 pb-10 shadow-xl rounded-sm transform -rotate-3 hover:rotate-0 transition-transform duration-300 max-w-[280px] border border-gray-200 relative">
           <div class="absolute -top-4 -left-4 text-xl select-none">✨</div>
-          <div class="w-full aspect-square bg-gray-200 rounded-sm flex items-center justify-center overflow-hidden mb-4">
-            <span class="text-xs text-gray-400 font-mono">[Foto de Vale 📷]</span>
+          <div class="w-full aspect-square bg-[#F8FAFC] rounded-sm flex items-center justify-center overflow-hidden mb-4 border border-gray-100">
+            <Image 
+              src={valeFoto} 
+              alt="Foto de Vale" 
+              class="w-full h-full object-cover"
+            />
           </div>
           <p class="font-sans text-center font-bold text-gray-700 text-sm tracking-wide">¡Hola, soy Vale! 👋</p>
         </div>

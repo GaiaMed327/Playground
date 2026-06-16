@@ -1,13 +1,15 @@
 ---
 // ContactCTA.astro - Sección de cierre / Contacto
+import { Image } from 'astro:assets';
+import patoLogo from '../assets/INICIO/PATO_LOGO.png';
 ---
 <section class="py-16 bg-white relative overflow-hidden">
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
     
     <div class="md:col-span-6 flex flex-col items-center md:items-start text-center md:text-left space-y-4 relative">
       
-      <div class="text-6xl animate-bounce select-none mb-2" style="animation-duration: 2s;">
-        🦆🌀
+      <div class="w-24 sm:w-32 animate-bounce select-none mb-4" style="animation-duration: 3s;">
+        <Image src={patoLogo} alt="Logo Pato" class="w-full h-auto" />
       </div>
 
       <h3 class="font-display text-2xl sm:text-3xl text-sky-400 font-bold">
@@ -26,7 +28,7 @@
       
       <div class="space-y-2">
         <h4 class="font-display text-2xl text-gray-900 font-bold">Correo</h4>
-        <p class="font-sans text-gray-600 text-sm sm:text-base">[Falta el correo de Vale ✉️]</p>
+        <p class="font-sans text-gray-600 text-sm sm:text-base">[Correo Electronico de Vale ✉️]</p>
       </div>
 
       <div class="space-y-2 flex flex-col items-center sm:items-start">
